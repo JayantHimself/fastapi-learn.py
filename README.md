@@ -4,3 +4,8 @@
 status codes HTTPexception , custom responses and some exception handeling in FASTAPI.
 
 #did further exception handling too.
+added middleware to track ->
+# to track performance
+# to debug
+# to monitor the api we created 
+eg> to track time taken .etc..
