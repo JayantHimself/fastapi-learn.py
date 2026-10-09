@@ -1,0 +1,11 @@
+from fastapi import FastAPI,Request
+import time
+app= FastAPI ()
+
+@app.middleware("http")
+async def log(request:Request,call_next):
+    startime = time.time()
+    response = await call_next(request)
+    processtime= time.time() - startime
+    print(f"Path:{request.url.path} | Time:{processtime}")
+    return response
