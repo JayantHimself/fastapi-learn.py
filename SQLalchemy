@@ -7,27 +7,27 @@ from sqlalchemy.orm import sessionmaker, declarative_base,Session
 from fastapi import FastAPI,Depends
 
 app = FastAPI()
-
+# DB URL
 DATABASE_URL = "sqlite:///./test.db"
-
+Engine create (DB connection)
 engine = create_engine(
     DATABASE_URL,
     connect_args={"check_same_thread":False}
 )
-
+# session (for DB operations)
 sessionLocal = sessionmaker(bind=engine)
-
+# base = (FOR MODEL)
 Base = declarative_base()
-
+# TABLE(MODEL)
 class Todo(Base):
     __tablename__ = "todos"
 
     id = Column(Integer, primary_key=True, index=True)
     title = Column(String)
     completed = Column(String)
-
+# CREATES THE TABLE
 Base.metadata.create_all(bind=engine)
-
+# dependency ( to provide DB session) 
 def get_db():
     db = sessionLocal()
     try:
