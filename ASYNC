@@ -1,0 +1,22 @@
+import time
+import asyncio
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+async def home():
+    await asyncio.sleep(3)
+    return{
+        "message":"Async API"
+    }
+#### NON API USE TO DISPLAY  ####
+# SYNC eg.
+# def task():
+#     time.sleep(3)
+#     return "Done"
+
+###   ASYNC eg.
+# async def task():
+#     await asyncio.sleep(3)
+#     return "Done"
