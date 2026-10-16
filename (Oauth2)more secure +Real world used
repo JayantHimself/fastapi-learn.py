@@ -4,7 +4,9 @@ from fastapi.security import OAuth2PasswordBearer,OAuth2PasswordRequestForm
 from datetime import datetime, timedelta, timezone
 from passlib.context import CryptContext
 
+
 app = FastAPI()
+
 
 #JWT Config
 SECRET_KEY = "mysecret"
