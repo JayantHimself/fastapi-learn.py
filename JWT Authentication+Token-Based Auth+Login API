@@ -19,6 +19,7 @@ def create_token(data: dict):
 
     return token
 
+
 #Login API(Token Generate)
 @app.post("/login")
 def login(username:str,password:str):
