@@ -8,7 +8,7 @@ client = TestClient(app)
 def test_home():
     response = client.get("/")
     #Status code check
-    assert response.status_code == 200
+    assert response.status_code == 200  ###expected result
     #Response data check
     assert response.json() == {"message":"Hello jayant"}
 
