@@ -21,7 +21,7 @@ def get_news():
 
     response = requests.get(url)
 
-    soup = BeautifulSoup(response.text, "html.parser")
+    soup = BeautifulSoup(response.text, "html.parser")  # parser is biultin that helps in html webpage parsing.
 
     title = []
 
