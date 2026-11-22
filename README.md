@@ -13,3 +13,4 @@ eg> to track time taken .etc..
 learnt using SQLlite and the required funnctions and methods.
  Showed that  CRUD operations uses sqlalchemy and  WE USED SQL ALCHEMY TO MAKE PYTHON CODE LOOKS CLEAN AND CAN USE PYTHON OBJECT TO MANIPULATE DATA IN OUR DATABASE.
 using commands like queries , filter and first ..
+step by step
